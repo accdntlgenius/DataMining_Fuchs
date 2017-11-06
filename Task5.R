@@ -1,24 +1,63 @@
-#a
+###########
+#
+#Data Mining: Basic concepts
+#Assignment 01
+#Daniel Ohrenhofer, Mariia Deriglazova
+#
+###########
+
+
+
+#Exercise 2
+# a)
+MyNumber <- 5
+# b)
+MyNumber <- MyNumber + 1
+# c)
+print (MyNumber)
+
+
+#Exercise 3
+# a)
+vector <- seq(3, 12, 3)
+# b)
+min <- min(vector)
+max <- max(vector)
+# c)
+sum <- sum(vector)
+# d)
+newVector <- sort(vector, decreasing = TRUE)
+
+
+#Exercise 4.
+matrix <- matrix(1:9, nrow = 3)
+# a)
+firstElement <- matrix[1,1]
+# b
+firstRow <- matrix[1,]
+# c)
+rowSum <- rowSums(matrix)
+# d)
+newMatrix <- rbind(matrix, c(1, 2, 3))
+# e)
+matrixOne <- newMatrix[newMatrix[,1]==1,]
+
+
+#Exercise 5.
+# a)
 Month <- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
 Coffee <- c(50, 60, 80, 50, 40, 30, 35, 55, 70, 60, 50, 40)
 plot(Month, Coffee)
-#b
+# b)
 plot(Month, Coffee, type="l")
-#c
+# c)
 plot(Month, Coffee, type="l",ylim=c(1, 100))
-#d
+# d)
 abline(h = max(Coffee), col="red")
-#e
+# e)
 names(Month) <- format(ISOdate(2017,1:12,1),"%B")
 plot(Month, Coffee, type="l",ylim=c(1, 100), xaxt="n")
 abline(h = max(Coffee), col="red")
 axis(1, at=1:12, labels=names(Month))
 
 
-
-  
-  
-
-
-?plot
-?axis
